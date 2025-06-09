@@ -1,0 +1,67 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.green-button{
+  background-color: green;
+  color: grey;
+}
+
+.green-button:hover{
+  height: 100px;
+}
+
+.green-button:active{
+  cursor: grab;
+}
+
+.blue-text{
+  color: blue;
+  font-style:italic;
+}
+
+.blue-text:hover{
+  font-size: 24px;
+}
+
+.green-text{
+  color: green;
+  font-weight: bold;
+  border: 2px solid red;
+  padding: 5px;
+}
+
+.green-text:hover{
+  border-color: brown;
+}
+
+.pilt {
+  height: 100px;
+  position: absolute;
+  right: 0;
+}
+
+.pilt:hover {
+  border-radius: 50px;
+  opacity: 0.5;
+}
+
+.styled-table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.styled-table td,
+.styled-table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #dddddd;
+}

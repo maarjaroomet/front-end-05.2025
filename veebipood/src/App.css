@@ -1,0 +1,36 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.pilt {
+  height: 100px;
+  border-radius: 10px;
+}
+
+.pilt:hover {
+  cursor: pointer;
+  opacity: 70%
+}
+
+.pilt:active {
+  transform: scale(90%);
+}
+
+.aktiivne{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.dark-mode {
+ background-color: black;
+ color: white;
+ min-height: 100vh;
+}
+
+.light-mode {
+ background-color: white;
+ color: black;
+}

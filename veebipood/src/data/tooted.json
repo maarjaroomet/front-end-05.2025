@@ -1,0 +1,11 @@
+[
+    {"nimi": "Nobe", "hind": 25000, "aktiivne": true, "pilt" : "https://accelerista.com/wp-content/uploads/2017/09/nobe.png"},
+    {"nimi": "BMW", "hind": 35000, "aktiivne": true, "pilt" : "https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/all-models/model-navigation/bmw-m4-cs-flyout.png"},
+    {"nimi": "Tesla", "hind": 75000, "aktiivne": false, "pilt" : "https://kalakanal.weebly.com/uploads/6/0/9/4/60945665/4072530_orig.jpg"},
+    {"nimi": "Audi", "hind": 45000, "aktiivne": true, "pilt" : "https://kalakanal.weebly.com/uploads/6/0/9/4/60945665/4072530_orig.jpg"},
+    {"nimi": "Volvo", "hind": 55000, "aktiivne": true, "pilt" : "https://kalakanal.weebly.com/uploads/6/0/9/4/60945665/4072530_orig.jpg"},
+    {"nimi": "Saab", "hind": 30000, "aktiivne": false, "pilt" : "https://kalakanal.weebly.com/uploads/6/0/9/4/60945665/4072530_orig.jpg"},
+    {"nimi": "Mercedes", "hind": 85000, "aktiivne": true, "pilt" : "https://kalakanal.weebly.com/uploads/6/0/9/4/60945665/4072530_orig.jpg"},
+    {"nimi": "Lamborghini", "hind": 125000, "aktiivne": true, "pilt" : "https://kalakanal.weebly.com/uploads/6/0/9/4/60945665/4072530_orig.jpg"},
+    {"nimi": "Aston Martin", "hind": 175000, "aktiivne": true, "pilt" : "https://autodesignmagazine.com/wp-content/uploads/2025/01/Aston-Martin-Vantage-Roadster_5-1.jpg"}
+]
