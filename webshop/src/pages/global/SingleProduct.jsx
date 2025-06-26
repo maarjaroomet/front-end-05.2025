@@ -1,12 +1,31 @@
 import { useParams } from "react-router-dom";
-import productsFromFile from "../../data/products.json";
+// import productsFromFile from "../../data/products.json";
+import { useEffect, useState } from "react";
 
 function SingleProduct() {
-  const {index} = useParams();
-  const foundProduct = productsFromFile[index];
+  const {id} = useParams();
+  //const foundProduct = productsFromFile[index]; 
+  const productsUrl = import.meta.env.VITE_PRODUCTS_DB_URL;;
+  const [dbProducts, setDbProducts] = useState([]);
+  const foundProduct = dbProducts.find(product => product.id === Number(id));
+  const [loading, setLoading] = useState(true);
+
+  
+  useEffect(() => {
+    fetch(productsUrl)
+      .then(res => res.json())
+      .then(json =>{ 
+        setDbProducts(json || []);
+        setLoading(false);
+      })
+  }, [productsUrl]);
 
   if(foundProduct === undefined) {
     return <div>Toodet ei leitud</div>
+  }
+
+  if(loading) {
+    return <div>Loading...</div>
   }
   return (
     <div>

@@ -1,7 +1,7 @@
 import './App.css'
 import {Route, Routes} from "react-router-dom"
 import HomePage from './pages/global/HomePage'
-import ContactUs from './pages/global/ContactUs'
+import {ContactUs} from './pages/global/ContactUs'
 import Shops from './pages/global/Shops'
 import Cart from './pages/global/Cart'
 import SingleProduct from './pages/global/SingleProduct'
@@ -15,6 +15,9 @@ import MaintainShops from './pages/admin/MaintainShops'
 import Login from './pages/auth/Login'
 import Signup from './pages/auth/Signup'
 import NavigationBar from './components/NavigationBar'
+import Supplier1 from './pages/admin/Supplier1'
+import Supplier2 from './pages/admin/Supplier2'
+import Supplier3 from './pages/admin/Supplier3'
 
 function App() {
 
@@ -27,14 +30,18 @@ function App() {
           <Route path="contact" element={ <ContactUs /> } />
           <Route path="shops" element={ <Shops /> } />
           <Route path="cart" element={ <Cart /> } />
-          <Route path="product/:index" element={ <SingleProduct /> } />
+          <Route path="product/:id" element={ <SingleProduct /> } />
 
           <Route path="admin" element={ <AdminHome />} />
           <Route path="admin/add-product" element={ <AddProduct /> } />
-          <Route path="admin/edit-product/:index" element={ <EditProduct /> } />
+          <Route path="admin/edit-product/:id" element={ <EditProduct /> } />
           <Route path="admin/maintain-products" element={ <MaintainProducts /> } />
           <Route path="admin/maintain-categories" element={ <MaintainCategories /> } />
           <Route path="admin/maintain-shops" element={ <MaintainShops /> } />
+
+          <Route path="admin/supplier1" element={ <Supplier1 /> } />
+          <Route path="admin/supplier2" element={ <Supplier2 /> } />
+          <Route path="admin/supplier3" element={ <Supplier3 /> } />
 
           <Route path="login" element={ <Login /> } />
           <Route path="signup" element={ <Signup /> } />

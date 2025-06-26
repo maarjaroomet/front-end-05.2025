@@ -1,13 +1,37 @@
 import { useNavigate, useParams } from "react-router-dom"
-import productsFromFile from "../../data/products.json"
-import { useState } from "react";
+// import productsFromFile from "../../data/products.json"
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 
 function EditProduct() {
-  const {index} = useParams();
-  const foundProduct = productsFromFile[index];
-  const [product, setProduct] = useState(foundProduct);
+  const {id} = useParams();
+  // const foundProduct = productsFromFile.find(product => product.id === Number(id));
   const navigate = useNavigate();
+  const [categories, setCategories] = useState([]);
+  const url = import.meta.env.VITE_CATEGORIES_DB_URL;
+  const [loading, setLoading] = useState(true);
+  const productsUrl = import.meta.env.VITE_PRODUCTS_DB_URL;;
+  const [dbProducts, setDbProducts] = useState([]);
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    fetch(url)
+      .then(res => res.json())
+      .then(json => {
+        setCategories(json || []);
+      })
+  }, [url]);
+
+  useEffect(() => {
+    fetch(productsUrl)
+      .then(res => res.json())
+      .then(json =>{ 
+        const foundProduct = json.find(product => product.id === Number(id));
+        setProduct(foundProduct);
+        setDbProducts(json || []);
+        setLoading(false);
+      })
+  }, [productsUrl, id]);
 
   const changeProduct = () => {
     if (product.title === undefined || product.title === "") {
@@ -45,11 +69,20 @@ function EditProduct() {
       return;
     }
 
-    productsFromFile[index] = product;
-    navigate("/admin/maintain-products");
+    const index = dbProducts.findIndex(p => p.id === product.id);
+    dbProducts[index] = product;
+    fetch(productsUrl, {method: "PUT", body: JSON.stringify(dbProducts)})
+          .then(res => res.json())
+          .then(() => {
+            navigate("/admin/maintain-products");
+          }) 
   }
 
-  if(foundProduct === undefined) {
+  if(loading) {
+    return <div>Loading...</div>
+  }
+
+  if(product === undefined) {
     return <div>Toodet ei leitud</div>
   }
 
@@ -57,19 +90,25 @@ function EditProduct() {
     <div>
       <div>{JSON.stringify(product)}</div>
       <label>Nimi</label> <br />
-      <input onChange={(e) => setProduct({...product, "title": e.target.value})} defaultValue={foundProduct.title} type="text" /> <br />
+      <input onChange={(e) => setProduct({...product, "title": e.target.value})} defaultValue={product.title} type="text" /> <br />
       <label>Hind</label> <br />
-      <input onChange={(e) => setProduct({...product, "price": e.target.value})} defaultValue={foundProduct.price} type="number" /> <br />
+      <input onChange={(e) => setProduct({...product, "price": e.target.value})} defaultValue={product.price} type="number" /> <br />
       <label>Kirjeldus</label> <br />
-      <input onChange={(e) => setProduct({...product, "description": e.target.value})} defaultValue={foundProduct.description} type="text" /> <br />
+      <input onChange={(e) => setProduct({...product, "description": e.target.value})} defaultValue={product.description} type="text" /> <br />
       <label>Kategooria</label> <br />
-      <input onChange={(e) => setProduct({...product, "category": e.target.value})} defaultValue={foundProduct.category} type="text" /> <br />
+      {/* <input onChange={(e) => setProduct({...product, "category": e.target.value})} defaultValue={foundProduct.category} type="text" /> <br /> */}
+      <select onChange={(e) => setProduct({...product, "category": e.target.value})} defaultValue={product.category}>
+        {categories.map(category => 
+          <option key={category.name}>
+            {category.name}
+          </option>)}
+      </select> <br />
       <label>Pilt</label> <br />
-      <input onChange={(e) => setProduct({...product, "image": e.target.value})} defaultValue={foundProduct.image} type="text" /> <br />
+      <input onChange={(e) => setProduct({...product, "image": e.target.value})} defaultValue={product.image} type="text" /> <br />
       <label>Hinnang</label> <br />
-      <input onChange={(e) => setProduct({...product, "rating": {...product.rating, "rate": e.target.value}})} defaultValue={foundProduct.rating.rate} type="number" /> <br />
+      <input onChange={(e) => setProduct({...product, "rating": {...product.rating, "rate": e.target.value}})} defaultValue={product.rating.rate} type="number" /> <br />
       <label>Hinnangu andjate arv</label> <br />
-      <input onChange={(e) => setProduct({...product, "rating": {...product.rating, "count": e.target.value}})} defaultValue={foundProduct.rating.count} type="number" /> <br />
+      <input onChange={(e) => setProduct({...product, "rating": {...product.rating, "count": e.target.value}})} defaultValue={product.rating.count} type="number" /> <br />
       <button onClick={changeProduct}>Muuda</button>
 
       <ToastContainer 

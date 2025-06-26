@@ -1,12 +1,12 @@
+import { Button, TextField } from "@mui/material"
 
 function Signup() {
   return (
     <div>
-      <label>Kasutajanimi</label> <br />
-      <input type="text" /> <br />
-      <label>Parool</label> <br />
-      <input type="password" /> <br />
-      <button>Registreeru</button>
+      <br /><br />
+            <TextField id="outlined-basic" label="Email" variant="outlined" /> <br /><br />
+            <TextField id="outlined-basic" label="Password" variant="outlined" /> <br /><br />
+            <Button variant="outlined">Registreeru</Button>
     </div>
   )
 }
