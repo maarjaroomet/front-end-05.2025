@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useState, type ReactNode } from "react"
 import { AuthContext } from "./AuthContext"
 
-export const AuthContextProvider = ({children}) => {
+export const AuthContextProvider = ({children}: {children: ReactNode}) => {
     const [loggedIn, setLoggedIn] = useState(sessionStorage.getItem("token") == "123");
 
     return (

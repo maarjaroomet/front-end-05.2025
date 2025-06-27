@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
+import type { Shop } from "../../models/Shop";
 
 function MaintainShops() {
-  const [shops, setShops] = useState([]);
+  const [shops, setShops] = useState<Shop[]>([]);
   const url = import.meta.env.VITE_SHOPS_DB_URL;
-  const shopRef = useRef();
-  const longitudeRef = useRef();
-  const latitudeRef = useRef();
-  const openTimeRef = useRef();
+  const shopRef = useRef<HTMLInputElement>(null);
+  const longitudeRef = useRef<HTMLInputElement>(null);
+  const latitudeRef = useRef<HTMLInputElement>(null);
+  const openTimeRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     fetch(url)
@@ -15,11 +16,20 @@ function MaintainShops() {
       .then(json => setShops(json || []))
   }, [url]);
 
+  
   const add = () => {
+    if(shopRef.current === null ||
+       longitudeRef.current === null ||
+       latitudeRef.current === null ||
+       openTimeRef.current === null
+    ){
+      return;
+    }
+
     const newShop = {
       name: shopRef.current.value,
-      longitude: longitudeRef.current.value,
-      latitude: latitudeRef.current.value,
+      longitude: Number(longitudeRef.current.value),
+      latitude: Number(latitudeRef.current.value),
       openTime: openTimeRef.current.value
     }
     shops.push(newShop);
@@ -27,6 +37,13 @@ function MaintainShops() {
       .then(res => res.json())
       .then(json => {
         setShops(json || []);
+        if(shopRef.current === null ||
+          longitudeRef.current === null ||
+          latitudeRef.current === null ||
+          openTimeRef.current === null
+        ){
+          return;
+        }
         shopRef.current.value = "";
         longitudeRef.current.value = "";
         latitudeRef.current.value = "";
@@ -34,7 +51,7 @@ function MaintainShops() {
       })
   }
 
-  const deleteShop = (index) => {
+  const deleteShop = (index: number) => {
     shops.splice(index, 1);
     fetch(url, {method: "PUT", body: JSON.stringify(shops)})
       .then(res => res.json())

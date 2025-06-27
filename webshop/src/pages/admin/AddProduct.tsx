@@ -1,14 +1,27 @@
 import { ToastContainer, toast } from 'react-toastify';
 // import productsFromFile from "../../data/products.json"
 import { useEffect, useState } from 'react';
+import { type Product } from '../../models/Product';
+import type { Category } from '../../models/Category';
 
 function AddProduct() {
-  const [product, setProduct] = useState({});
-    const [categories, setCategories] = useState([]);
+  const [product, setProduct] = useState<Product>({
+    id: 0,
+    title: "",
+    price: 0,
+    description: "",
+    category: "",
+    image: "",
+    rating: {
+      rate: 0,
+      count: 0
+    }
+  });
+    const [categories, setCategories] = useState<Category[]>([]);
     const categoriesUrl = import.meta.env.VITE_CATEGORIES_DB_URL;
     const [loading, setLoading] = useState(true);
     const productsUrl = import.meta.env.VITE_PRODUCTS_DB_URL;
-    const [dbProducts, setDbProducts] = useState([]);
+    const [dbProducts, setDbProducts] = useState<Product[]>([]);
 
     
     useEffect(() => {
@@ -31,7 +44,7 @@ function AddProduct() {
 
   const addProduct = () => {
 
-    if (product.id === undefined || product.id === "") {
+    if (product.id === undefined || product.id === 0) {
       toast.error("ID puudu!");
       return;
     }
@@ -41,7 +54,7 @@ function AddProduct() {
       return;
     }
 
-    if (product.price === undefined || product.price === "") {
+    if (product.price === undefined || product.price === 0) {
       toast.error("Hind puudu!");
       return;
     }
@@ -61,12 +74,12 @@ function AddProduct() {
       return;
     }
 
-    if (product.rating.rate === undefined || product.rating.rate === "") {
+    if (product.rating.rate === undefined || product.rating.rate === 0) {
       toast.error("Hinnang puudu");
       return;
     }
 
-    if (product.rating.count === undefined || product.rating.count === "") {
+    if (product.rating.count === undefined || product.rating.count === 0) {
       toast.error("Hinnangu andjate arv puudu");
       return;
     }
@@ -89,11 +102,11 @@ function AddProduct() {
     <div>
       <div>{JSON.stringify(product)}</div>
       <label>Toote ID</label> <br />
-      <input onChange={(e) => setProduct({...product, "id":e.target.value})} type="number" /> <br />
+      <input onChange={(e) => setProduct({...product, "id":Number(e.target.value)})} type="number" /> <br />
       <label>Toote nimi</label> <br />
       <input onChange={(e) => setProduct({...product, "title":e.target.value})} type="text" /> <br />
       <label>Toote hind</label> <br />
-      <input onChange={(e) => setProduct({...product, "price":e.target.value})} type="number" /> <br />
+      <input onChange={(e) => setProduct({...product, "price":Number(e.target.value)})} type="number" /> <br />
       <label>Toote kirjeldus</label> <br />
       <input onChange={(e) => setProduct({...product, "description":e.target.value})} type="text" /> <br />
       <label>Toote kategooria</label> <br />
@@ -108,9 +121,9 @@ function AddProduct() {
       <label>Toote pilt</label> <br />
       <input onChange={(e) => setProduct({...product, "image":e.target.value})} type="text" /> <br />
       <label>Toote hinnang</label> <br />
-      <input onChange={(e) => setProduct({...product, "rating": {...product.rating, "rate": e.target.value}})} type="number" /> <br />
+      <input onChange={(e) => setProduct({...product, "rating": {...product.rating, "rate": Number(e.target.value)}})} type="number" /> <br />
       <label>Toote hinnangute andjate arv</label> <br />
-      <input onChange={(e) => setProduct({...product, "rating": {...product.rating, "count": e.target.value}})} type="number" /> <br />
+      <input onChange={(e) => setProduct({...product, "rating": {...product.rating, "count": Number(e.target.value)}})} type="number" /> <br />
       <button onClick={addProduct}>Lisa</button> <br />
 
       <ToastContainer 

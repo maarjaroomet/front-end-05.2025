@@ -1,13 +1,13 @@
 import { useState, type ReactNode } from "react"
 import { CartSumContext } from "./CartSumContext"
-import type { Product } from "../models/Product";
+import type { CartProduct } from "../models/CartProduct";
 
 export const CartSumContextProvider = ({children}: {children: ReactNode}) => {
     const [cartSum, setCartSum] = useState(calculateCartSum());
 
     function calculateCartSum() {
-        const products: Product[] = JSON.parse(localStorage.getItem("cart") || "[]") ;
-        const totalPrice = products.reduce((sum, product) => sum + Number(product.price || 0), 0);
+        const products: CartProduct[] = JSON.parse(localStorage.getItem("cart") || "[]") ;
+        const totalPrice = products.reduce((sum, cp) => sum + Number(cp.product.price * cp.quantity), 0);
         return totalPrice;
     }
 

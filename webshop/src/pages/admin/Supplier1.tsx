@@ -1,17 +1,17 @@
 import { useEffect } from "react";
 import { useState } from "react"
+import type { Product } from "../../models/Product";
 
 // renderdamine --> esimest korda HTMLi väljakuvamine
 // re-renderdamine --> setteri HTMLi uuendamine
 
-function Supplier2() {
+function Supplier1() {
     // https://fakestoreapi.com/products
-    const [products, setProducts] = useState([]);
-    const [openDescription, setOpenDescription] = useState(-1);
+    const [products, setProducts] = useState<Product[]>([]);
 
     // uef, seda tehakse ainult 1 korra (ei lähe korduvalt käima)
     useEffect(() => {
-        fetch("https://api.escuelajs.co/api/v1/products")
+        fetch("https://fakestoreapi.com/products")
             .then(res => res.json())
             .then(json => setProducts(json))
     }, []);
@@ -33,6 +33,8 @@ function Supplier2() {
                             <th>Toote kirjeldus</th>
                             <th>Toote kategooria</th>
                             <th>Toote pilt</th>
+                            <th>Toote hinnang</th>
+                            <th>Hindajate arv</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,14 +44,11 @@ function Supplier2() {
                             <td>{product.title}</td>
                             <td>{product.price.toFixed(2)}</td>
                             <td>{(product.price * 1.2).toFixed(2)}</td>
-                            <td>{product.description.length > 200 && openDescription !== product.id? 
-                                <>
-                                    <span>{product.description.substring(0, 200) + "..."}</span>
-                                    <button onClick={() => setOpenDescription(product.id)}>nt rohkem</button>
-                                </> : 
-                                product.description}</td>
-                            <td>{product.category.name}</td>
-                            <td><img style={{width: "50px"}} src={product.images[0]} alt="" /></td>
+                            <td>{product.description}</td>
+                            <td>{product.category}</td>
+                            <td><img style={{width: "50px"}} src={product.image} alt="" /></td>
+                            <td>{product.rating.rate}</td>
+                            <td>{product.rating.count}</td> 
                         </tr>)}
                     </tbody>
                 </table>
@@ -57,4 +56,4 @@ function Supplier2() {
   )
 }
 
-export default Supplier2
+export default Supplier1

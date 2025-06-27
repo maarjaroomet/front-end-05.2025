@@ -8,6 +8,8 @@ import YksUudis from './pages/YksUudis'
 import LisaUudis from './pages/LisaUudis'
 import HaldaUudiseid from './pages/HaldaUudiseid'
 import MuudaUudis from './pages/MuudaUudis'
+import KasutajaPostitus from './pages/KasutajaPostitus'
+import YksPostitus from './pages/YksPostitus'
 
 function App() {
 
@@ -40,7 +42,9 @@ function App() {
         <Route path='uudis/:index' element={ <YksUudis/> }></Route>
         <Route path='lisa-uudis' element={ <LisaUudis/> }></Route>
         <Route path='halda' element={ <HaldaUudiseid/> }></Route>
-         <Route path='muuda/:index' element={ <MuudaUudis/> }></Route>
+        <Route path='muuda/:index' element={ <MuudaUudis/> }></Route>
+        <Route path='kasutaja-postitus/:kasutajaId' element={ <KasutajaPostitus/> }></Route>
+        <Route path='postitus/:postituseId' element={ <YksPostitus/> }></Route>
       </Routes>
     </>
   )

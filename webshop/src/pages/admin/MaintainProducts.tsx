@@ -2,11 +2,12 @@ import { useEffect, useRef, useState } from "react";
 // import productsFromFile from "../../data/products.json";
 import {Link} from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
+import type { Product } from "../../models/Product";
 
 function MaintainProducts() {
-  const [products, setProducts] = useState([]);
-  const [dbProducts, setDbProducts] = useState([]);
-  const searchRef = useRef();
+  const [products, setProducts] = useState<Product[]>([]);
+  const [dbProducts, setDbProducts] = useState<Product[]>([]);
+  const searchRef = useRef<HTMLInputElement>(null);
   const productsUrl = import.meta.env.VITE_PRODUCTS_DB_URL;
   const [loading, setLoading] = useState(true);
 
@@ -20,7 +21,7 @@ function MaintainProducts() {
         })
     }, [productsUrl]);
 
-  const deleteProduct = (id) => {
+  const deleteProduct = (id: number) => {
     const index = dbProducts.findIndex(product => product.id === id);
     dbProducts.splice(index,1);
     // setProducts(dbProducts.slice());
@@ -34,9 +35,13 @@ function MaintainProducts() {
   }
 
   const searchFromProcucts = () => {
+    const searchInput = searchRef.current;
+    if(searchInput === null) {
+      return;
+    }
     const result = dbProducts.filter(product => 
-        product.title.toLowerCase().includes(searchRef.current.value.toLowerCase()) ||
-        product.description.toLowerCase().includes(searchRef.current.value.toLowerCase())
+        product.title.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchInput.value.toLowerCase())
     );
     setProducts(result);
   }

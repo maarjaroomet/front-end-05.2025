@@ -1,6 +1,6 @@
 import { Button, TextField } from "@mui/material"
 import { useContext } from "react"
-import { AuthContext } from "../../context/AuthContext"
+import { AuthContext } from "../../context/AuthContext.tsx"
 
 function Login() {
   const {setLoggedIn} = useContext(AuthContext);

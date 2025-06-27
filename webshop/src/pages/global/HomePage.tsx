@@ -7,11 +7,15 @@ import { Button } from "@mui/material";
 import { CartSumContext } from "../../context/CartSumContext";
 import { useDispatch } from "react-redux";
 import { increment } from "../../redux/counterSlice";
+import type { Product } from "../../models/Product";
+import type { Category } from "../../models/Category";
+import type { CartProduct } from "../../models/CartProduct";
+import styles from "../../css/HomePage.module.css";
 
 function HomePage() {
-  const [products, setProducts] = useState([]);
-  const [dbProducts, setDbProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [dbProducts, setDbProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const categoriesUrl = import.meta.env.VITE_CATEGORIES_DB_URL;
   const productsUrl = import.meta.env.VITE_PRODUCTS_DB_URL;;
   const [loading, setLoading] = useState(true);
@@ -34,9 +38,15 @@ function HomePage() {
       })
   }, [productsUrl]);
 
-  const addToCart = (product) => {
-    const cartLS = JSON.parse(localStorage.getItem("cart")) || [];
-    cartLS.push(product);
+  const addToCart = (product: Product) => {
+    const cartLS: CartProduct[] = JSON.parse(localStorage.getItem("cart") || "[]") ;
+    const index = cartLS.findIndex(cp => cp.product.id === product.id)
+    if(index >= 0) {
+      cartLS[index].quantity++;
+    } else {
+      cartLS.push({"product": product, "quantity": 1});
+    }
+    
     localStorage.setItem("cart", JSON.stringify(cartLS));
     toast.success(product.title + " lisatud ostukorvi");
     add(product.price);
@@ -76,7 +86,7 @@ function HomePage() {
     setProducts(products.slice());
   }
 
-  const filterByCategory = (categoryClicked) => {
+  const filterByCategory = (categoryClicked: string) => {
     const result = dbProducts.filter(product => product.category === categoryClicked);
     setProducts(result);
   }
@@ -102,18 +112,21 @@ function HomePage() {
        <button key={category.name} onClick={() => filterByCategory(category.name)}>
         {category.name}
       </button>) }
-
-      {products.map(product =>
-        <div key={product.id}>
-          <img style={{width: "100px"}} src={product.image} alt="" />
-          <div>{product.title}</div>
-          <div>{product.price}</div>
+      
+      <div className= {styles.products}>
+        {products.map(product =>
+        <div key={product.id} className={styles.product}>
+          <img className={styles.image} src={product.image} alt="" />
+          <div className={styles.title}>{product.title}</div>
+          <div className={styles.price}>{product.price}</div>
           <Button variant="contained" onClick={() => addToCart(product)}>Lisa ostukorvi</Button>
           <Link to={"/product/" + product.id}>
             <Button variant="outlined">Vt lähemalt</Button>
           </Link>
         </div>
       )}
+      </div>
+      
 
       <ToastContainer 
         position="bottom-right"

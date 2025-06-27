@@ -1,15 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
+import type { CartProduct } from '../models/CartProduct';
 
-// function calculateCartSum() {
-//     const products = JSON.parse(localStorage.getItem("cart")) || [];
-//     const totalPrice = products.reduce((sum, product) => sum + Number(product.price || 0), 0);
-//     return totalPrice;
-// }
+function calculateCartCount() {
+    const products: CartProduct[] = JSON.parse(localStorage.getItem("cart") || "[]");
+    const totalPrice = products.reduce((sum, cp) => sum + Number(cp.quantity || 0), 0);
+    return totalPrice;
+}
 
 export const counterSlice = createSlice({
   name: 'counter',
   initialState: {
-    value: (JSON.parse(localStorage.getItem("cart")) || []).length
+    value: calculateCartCount()
   },
   reducers: {
     increment: state => {
@@ -22,9 +23,9 @@ export const counterSlice = createSlice({
     decrement: state => {
       state.value -= 1
     },
-    // incrementByAmount: (state, action) => {
-    //   state.value += action.payload
-    // }
+    decrementByAmount: (state, action) => {
+      state.value -= action.payload
+    },
     empty: state => {
       state.value = 0
     },
@@ -32,6 +33,6 @@ export const counterSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, empty } = counterSlice.actions
+export const { increment, decrement, empty, decrementByAmount } = counterSlice.actions
 
 export default counterSlice.reducer
