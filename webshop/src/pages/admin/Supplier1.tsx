@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react"
-import type { Product } from "../../models/Product";
 
 // renderdamine --> esimest korda HTMLi väljakuvamine
 // re-renderdamine --> setteri HTMLi uuendamine
 
 function Supplier1() {
     // https://fakestoreapi.com/products
-    const [products, setProducts] = useState<Product[]>([]);
+    const [products, setProducts] = useState<any[]>([]);
 
     // uef, seda tehakse ainult 1 korra (ei lähe korduvalt käima)
     useEffect(() => {

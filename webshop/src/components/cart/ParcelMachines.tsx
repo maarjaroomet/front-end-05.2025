@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react"
-import type { ParcelMachine } from "../models/ParcelMachine";
+import type { ParcelMachine } from "../../models/ParcelMachine";
 
 function ParcelMachines() {
     const [parcelMachines, setParcelMachines] = useState<ParcelMachine[]>([]);

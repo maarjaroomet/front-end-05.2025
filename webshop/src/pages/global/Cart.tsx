@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import ParcelMachines from "../../components/ParcelMachines";
-import Payment from "../../components/Payment";
+import ParcelMachines from "../../components/cart/ParcelMachines";
+import Payment from "../../components/cart/Payment.tsx";
 import { CartSumContext } from "../../context/CartSumContext.tsx";
 import { useDispatch } from "react-redux";
 import { decrement, decrementByAmount, empty, increment } from "../../redux/counterSlice.ts";
@@ -9,11 +9,12 @@ import minus from "../../assets/minus.png";
 import plus from "../../assets/plus.png";
 import remove from "../../assets/remove.png";
 import styles from "../../css/Cart.module.css";
+import { calculateCartSum } from "../../utils/calculations.ts";
 
 function Cart() {
   const [products, setProducts] = useState<CartProduct[]>(JSON.parse(localStorage.getItem("cart") || "[]"));
   const cartSumCtx = useContext(CartSumContext);
-  const totalPrice = products.reduce((sum, cp) => sum + Number(cp.product.price * cp.quantity), 0);
+  
   const dispatch = useDispatch();
 
   const emptyCart = () => {
@@ -55,7 +56,7 @@ function Cart() {
       {products.length > 0 && 
         <>
           <button onClick={emptyCart}>Tühjenda</button>
-          <div>Ostukorvis on {products.length} erinevat toodet summas {totalPrice.toFixed(2)} €</div>
+          <div>Ostukorvis on {products.length} erinevat toodet summas {calculateCartSum(products).toFixed(2)} €</div>
         </>
       }
       
@@ -81,7 +82,7 @@ function Cart() {
         <div>
           <ParcelMachines />
           <br />
-          <Payment sum={totalPrice} />
+          <Payment sum={calculateCartSum(products)} />
         </div>}
 
     </div>

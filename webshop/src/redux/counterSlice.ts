@@ -3,8 +3,7 @@ import type { CartProduct } from '../models/CartProduct';
 
 function calculateCartCount() {
     const products: CartProduct[] = JSON.parse(localStorage.getItem("cart") || "[]");
-    const totalPrice = products.reduce((sum, cp) => sum + Number(cp.quantity || 0), 0);
-    return totalPrice;
+    return products.reduce((sum, cp) => sum + Number(cp.quantity || 0), 0);
 }
 
 export const counterSlice = createSlice({

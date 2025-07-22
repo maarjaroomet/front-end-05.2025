@@ -3,38 +3,57 @@ import { useEffect, useRef, useState } from "react";
 import {Link} from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import type { Product } from "../../models/Product";
+import Table from 'react-bootstrap/Table';
+import ConfirmationModal from "../../components/ConfirmationModal";
+import useFetchProducts from "../../hooks/useFetchProducts";
 
 function MaintainProducts() {
   const [products, setProducts] = useState<Product[]>([]);
-  const [dbProducts, setDbProducts] = useState<Product[]>([]);
+  //const [dbProducts, setDbProducts] = useState<Product[]>([]);
   const searchRef = useRef<HTMLInputElement>(null);
   const productsUrl = import.meta.env.VITE_PRODUCTS_DB_URL;
-  const [loading, setLoading] = useState(true);
+  //const [loading, setLoading] = useState(true);
+  const idToBeDeleted = useRef(-1);
+  const confirmationModalRef = useRef<any>(null);
+  const {items, dbProducts, loading} = useFetchProducts();
 
   useEffect(() => {
-      fetch(productsUrl)
-        .then(res => res.json())
-        .then(json =>{ 
-          setProducts(json || []);
-          setDbProducts(json || []);
-          setLoading(false);
-        })
-    }, [productsUrl]);
+    setProducts(items);
+  }, [items]);
 
-  const deleteProduct = (id: number) => {
-    const index = dbProducts.findIndex(product => product.id === id);
-    dbProducts.splice(index,1);
-    // setProducts(dbProducts.slice());
-    
-    fetch(productsUrl, {method: "PUT", body: JSON.stringify(dbProducts)})
-    .then(res => res.json())
-    .then(() => {
-        searchFromProcucts();
-        toast.success("Toode kustutatud");
-    })
+  // useEffect(() => {
+  //     fetch(productsUrl)
+  //       .then(res => res.json())
+  //       .then(json =>{ 
+  //         setProducts(json || []);
+  //         setDbProducts(json || []);
+  //         setLoading(false);
+  //       })
+  //   }, [productsUrl]);
+
+  const openModal = (productId: number) => {
+    idToBeDeleted.current = productId;
+    confirmationModalRef.current.setShow(true);
   }
 
-  const searchFromProcucts = () => {
+  const deleteProduct = () => {
+    // const index = dbProducts.findIndex(product => product.id === idToBeDeleted.current);
+    // dbProducts.splice(index,1);
+    //setProducts(dbProducts.slice());
+    
+    fetch(productsUrl + "?id=" + idToBeDeleted.current, {
+      method: "DELETE"
+    })
+    .then(res => res.json())
+    .then(json => {
+        searchFromProcucts(json);
+        toast.success("Toode kustutatud");
+        confirmationModalRef.current.setShow(false);
+    })
+    
+  }
+
+  const searchFromProcucts = (dbProducts: Product[]) => {
     const searchInput = searchRef.current;
     if(searchInput === null) {
       return;
@@ -53,8 +72,8 @@ function MaintainProducts() {
   return (
     <div>
         <label>Otsi </label>
-        <input onChange={searchFromProcucts} ref={searchRef} type="text" />
-        <table>
+        <input onChange={() => searchFromProcucts(dbProducts)} ref={searchRef} type="text" />
+        <Table striped bordered hover>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -76,15 +95,21 @@ function MaintainProducts() {
                     <td>{product.title}</td>
                     <td>{product.price}</td>
                     <td>{product.description}</td>
-                    <td>{product.category}</td>
+                    <td>{product.category.name}</td>
                     <td><img style={{width: "50px"}} src={product.image} alt="" /></td>
                     <td>{product.rating.rate}</td>
                     <td>{product.rating.count}</td>
-                    <td><button onClick={() => deleteProduct(product.id)}>x</button></td>
+                    <td><button onClick={() => openModal(Number(product.id))}>x</button></td>
                     <td><Link to={"/admin/edit-product/" + product.id}><button>Muuda</button></Link></td>
                 </tr>)}
             </tbody>
-        </table>
+        </Table>
+
+        <ConfirmationModal 
+          ref={confirmationModalRef} 
+          onDelete={deleteProduct}
+          message="product"
+        />
 
         <ToastContainer 
             position="bottom-right"

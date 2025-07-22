@@ -27,6 +27,10 @@ import { store } from './redux/store.js';
 // ülejäänud on lokaalsed
 
 
+//<StrictMode> on topeltrerenderduseks,aru saamaks kas kõik on korras
+// viskab warninguid kui on mingi probleem
+//npm run build (serverisse üles minev kood), siis <StrictMode> kaob
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
@@ -40,3 +44,8 @@ createRoot(document.getElementById('root')!).render(
     </BrowserRouter>
   </StrictMode>,
 )
+
+
+//alamkomponent: taaskasutan HTMLi (võib ka JavaSripti)
+//utils: taaskasutan JavaScripti (ilma HTMLita), siin ei saa Hooke kasutada (use..)
+//custom HOOK: taaskasutan Javascripti, kus on ka Hookid
