@@ -27,6 +27,18 @@ function AuthForm(props: AuthFormInterface) {
         return;
     }
 
+    if(props.buttonContent === "Registreeru" && 
+          person.email === ""){
+        alert("Email puudu!");
+        return;
+    }
+
+    if(props.buttonContent === "Registreeru" && 
+          person.password === ""){
+        alert("Parool puudu!");
+        return;
+    }
+
     const endpoint = props.buttonContent === "Registreeru" ? "/signup" : "/login";
     fetch(url + endpoint, {
       method: "POST",
@@ -34,12 +46,12 @@ function AuthForm(props: AuthFormInterface) {
       headers: {"Content-Type": "application/json"}
     }).then(res => res.json())
     .then(json => {
-      if(json.timestamp && json.status && json.error) {
-        alert(json.error);
+      if(json.message && json.statusCode && json.timestamp) {
+        alert(json.message);
         return;
       }
       setLoggedIn(true);
-      sessionStorage.setItem("token", "123");
+      sessionStorage.setItem("token", json.token);
       navigate("/admin");
     })           
   }

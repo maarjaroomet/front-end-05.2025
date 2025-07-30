@@ -37,7 +37,8 @@ function MaintainCategories() {
       method: "POST", 
       body: JSON.stringify({name: categoryRef.current.value}),
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Authorization": "Bearer" + sessionStorage.getItem("token")
       }
     })
       .then(res => res.json())
@@ -54,7 +55,10 @@ function MaintainCategories() {
   const deleteCategory = () => {
     console.log(idToBeDeleted);
     //categories.splice(indexToBeDeleted.current, 1);
-    fetch(url + "?id=" + idToBeDeleted.current, {method: "DELETE"})
+    fetch(url + "?id=" + idToBeDeleted.current, {
+      method: "DELETE",
+      headers: {"Authorization": "Bearer" + sessionStorage.getItem("token")}
+    })
       .then(res => res.json())
       .then(json => {
         setCategories(json || []);

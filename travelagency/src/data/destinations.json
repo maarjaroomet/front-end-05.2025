@@ -1,0 +1,450 @@
+[
+  {
+    "id": 1,
+    "destination": "Bulgaaria",
+    "price": 471.51,
+    "description": "Maria Resort pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Maria Resort on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Maria Resort",
+    "length": 5,
+    "startDate": "11.08.2025",
+    "endDate": "16.08.2025",
+    "persons": 3,
+    "image": "https://cdn.worldota.net/t/640x400/content/b4/b3/b4b3f96727d91502274e70f7a3359a5fc63267e2.jpeg",
+    "rating": {
+      "rate": 4.3,
+      "count": 218
+    }
+  },
+  {
+    "id": 2,
+    "destination": "Bulgaaria",
+    "price": 826.73,
+    "description": "Sunny Beach Hotel pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Sunny Beach Hotel on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Sunny Beach Hotel",
+    "length": 7,
+    "startDate": "08.09.2025",
+    "endDate": "15.09.2025",
+    "persons": 1,
+    "image": "https://cdn.worldota.net/t/640x400/content/a0/14/a0147d6851763a0f9f70365c1eae3f9fdd7aae2b.JPEG",
+    "rating": {
+      "rate": 4.3,
+      "count": 233
+    }
+  },
+  {
+    "id": 3,
+    "destination": "Bulgaaria",
+    "price": 767.12,
+    "description": "Golden Sands Palace pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Golden Sands Palace on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Golden Sands Palace",
+    "length": 7,
+    "startDate": "19.09.2025",
+    "endDate": "26.09.2025",
+    "persons": 1,
+    "image": "https://cdn.worldota.net/t/640x400/content/10/96/1096f7f24e53033de66970c929abdc0e87a5c88c.JPEG",
+    "rating": {
+      "rate": 3.7,
+      "count": 158
+    }
+  },
+  {
+    "id": 4,
+    "destination": "Bulgaaria",
+    "price": 907.61,
+    "description": "Varna Sea View pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Varna Sea View on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Varna Sea View",
+    "length": 8,
+    "startDate": "07.07.2025",
+    "endDate": "15.07.2025",
+    "persons": 1,
+    "image": "https://cdn.worldota.net/t/640x400/content/3f/9f/3f9f0c0cff09ca80b05995df72b688ce85508ec4.JPEG",
+    "rating": {
+      "rate": 4.4,
+      "count": 241
+    }
+  },
+  {
+    "id": 5,
+    "destination": "Bulgaaria",
+    "price": 423.91,
+    "description": "Black Sea Pearl pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Black Sea Pearl on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Black Sea Pearl",
+    "length": 10,
+    "startDate": "21.09.2025",
+    "endDate": "01.10.2025",
+    "persons": 4,
+    "image": "https://cdn.worldota.net/t/640x400/content/6e/95/6e95a13c1ad715e4f1b04c7a2e96871c2d79726f.JPEG",
+    "rating": {
+      "rate": 3.8,
+      "count": 81
+    }
+  },
+  {
+    "id": 6,
+    "destination": "Bulgaaria",
+    "price": 474.23,
+    "description": "Nessebar Retreat pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Nessebar Retreat on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Nessebar Retreat",
+    "length": 9,
+    "startDate": "21.08.2025",
+    "endDate": "30.08.2025",
+    "persons": 2,
+    "image": "https://cdn.worldota.net/t/640x400/content/f2/ca/f2ca76f64cb8c452d0c9426e2fb7b0cb669e99e6.JPEG",
+    "rating": {
+      "rate": 4.8,
+      "count": 150
+    }
+  },
+  {
+    "id": 7,
+    "destination": "Bulgaaria",
+    "price": 830.44,
+    "description": "Sozopol Bay Hotel pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Sozopol Bay Hotel on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Sozopol Bay Hotel",
+    "length": 9,
+    "startDate": "20.08.2025",
+    "endDate": "29.08.2025",
+    "persons": 4,
+    "image": "https://cdn.worldota.net/t/640x400/content/59/08/5908b1de9a969a994de2cee5e20c3e981738646d.JPEG",
+    "rating": {
+      "rate": 4.8,
+      "count": 114
+    }
+  },
+  {
+    "id": 8,
+    "destination": "Kreeka",
+    "price": 949.27,
+    "description": "Aegean Blue Resort pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Aegean Blue Resort on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Aegean Blue Resort",
+    "length": 10,
+    "startDate": "15.08.2025",
+    "endDate": "25.08.2025",
+    "persons": 3,
+    "image": "https://cdn.worldota.net/t/640x400/content/f2/12/f2123fe7490f8c0dc72c84725bddabed6a9130a3.JPEG",
+    "rating": {
+      "rate": 3.7,
+      "count": 239
+    }
+  },
+  {
+    "id": 9,
+    "destination": "Kreeka",
+    "price": 686.83,
+    "description": "Santorini Sunset Hotel pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Santorini Sunset Hotel on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Santorini Sunset Hotel",
+    "length": 10,
+    "startDate": "08.07.2025",
+    "endDate": "18.07.2025",
+    "persons": 2,
+    "image": "https://cdn.worldota.net/t/640x400/content/f6/f7/f6f772b015b2d519a52fe68ea8323325381ba9ce.jpeg",
+    "rating": {
+      "rate": 4.9,
+      "count": 147
+    }
+  },
+  {
+    "id": 10,
+    "destination": "Kreeka",
+    "price": 491.45,
+    "description": "Rhodes Harmony pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Rhodes Harmony on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Rhodes Harmony",
+    "length": 6,
+    "startDate": "26.08.2025",
+    "endDate": "01.09.2025",
+    "persons": 4,
+    "image": "https://cdn.worldota.net/t/640x400/content/88/2c/882cac0ac4c0a4af42ab56743516691d42dff28e.jpeg",
+    "rating": {
+      "rate": 5.0,
+      "count": 150
+    }
+  },
+  {
+    "id": 11,
+    "destination": "Kreeka",
+    "price": 455.92,
+    "description": "Crete Comfort pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Crete Comfort on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Crete Comfort",
+    "length": 4,
+    "startDate": "26.08.2025",
+    "endDate": "30.08.2025",
+    "persons": 2,
+    "image": "https://cdn.worldota.net/t/640x400/content/f9/ee/f9ee5436e6a6b0adec5ffa0a58bbc10bd471ceb2.jpeg",
+    "rating": {
+      "rate": 3.9,
+      "count": 158
+    }
+  },
+  {
+    "id": 12,
+    "destination": "Kreeka",
+    "price": 492.69,
+    "description": "Mykonos Elite pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Mykonos Elite on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Mykonos Elite",
+    "length": 8,
+    "startDate": "08.08.2025",
+    "endDate": "16.08.2025",
+    "persons": 3,
+    "image": "https://cdn.worldota.net/t/640x400/content/80/d5/80d53b0c2b379bd2d96dce2f05fc4804a3fc27c8.jpeg",
+    "rating": {
+      "rate": 4.2,
+      "count": 189
+    }
+  },
+  {
+    "id": 13,
+    "destination": "Kreeka",
+    "price": 565.63,
+    "description": "Athens Garden Inn pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Athens Garden Inn on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Athens Garden Inn",
+    "length": 10,
+    "startDate": "21.07.2025",
+    "endDate": "31.07.2025",
+    "persons": 2,
+    "image": "https://cdn.worldota.net/t/640x400/ostrovok/6b/34/6b34995c6c0f2fcdfdf9d5549d9c53b2279fcfa6.jpeg",
+    "rating": {
+      "rate": 4.5,
+      "count": 248
+    }
+  },
+  {
+    "id": 14,
+    "destination": "Kreeka",
+    "price": 867.75,
+    "description": "Zakynthos Beach Resort pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Zakynthos Beach Resort on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Zakynthos Beach Resort",
+    "length": 9,
+    "startDate": "25.07.2025",
+    "endDate": "03.08.2025",
+    "persons": 1,
+    "image": "https://cdn.worldota.net/t/640x400/content/78/8c/788cf43e1b38fa2c06580a14c886a7438096a822.JPEG",
+    "rating": {
+      "rate": 3.8,
+      "count": 178
+    }
+  },
+  {
+    "id": 15,
+    "destination": "Itaalia",
+    "price": 887.08,
+    "description": "Bella Vista Hotel pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Bella Vista Hotel on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Bella Vista Hotel",
+    "length": 9,
+    "startDate": "10.09.2025",
+    "endDate": "19.09.2025",
+    "persons": 2,
+    "image": "https://cdn.worldota.net/t/640x400/content/10/a4/10a41c0b0934992b37a770a3e76b6451a8b39770.JPEG",
+    "rating": {
+      "rate": 3.8,
+      "count": 132
+    }
+  },
+  {
+    "id": 16,
+    "destination": "Itaalia",
+    "price": 568.9,
+    "description": "Hotel Venezia pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Hotel Venezia on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Hotel Venezia",
+    "length": 9,
+    "startDate": "11.08.2025",
+    "endDate": "20.08.2025",
+    "persons": 4,
+    "image": "https://cdn.worldota.net/t/640x400/content/9e/6c/9e6c07cdf9ccdc872fd986508cae59933f2c8fa9.JPEG",
+    "rating": {
+      "rate": 4.7,
+      "count": 189
+    }
+  },
+  {
+    "id": 17,
+    "destination": "Itaalia",
+    "price": 713.51,
+    "description": "Roma Boutique pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Roma Boutique on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Roma Boutique",
+    "length": 10,
+    "startDate": "19.09.2025",
+    "endDate": "29.09.2025",
+    "persons": 3,
+    "image": "https://cdn.worldota.net/t/640x400/content/04/0b/040b2cf08cdf58c1815597e0fa51fa83113b2260.jpeg",
+    "rating": {
+      "rate": 4.1,
+      "count": 167
+    }
+  },
+  {
+    "id": 18,
+    "destination": "Itaalia",
+    "price": 832.96,
+    "description": "Florence Garden Hotel pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Florence Garden Hotel on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Florence Garden Hotel",
+    "length": 9,
+    "startDate": "29.09.2025",
+    "endDate": "08.10.2025",
+    "persons": 4,
+    "image": "https://cdn.worldota.net/t/640x400/content/5c/68/5c68b51512d4ba675ceef9cc345159e55d264235.jpeg",
+    "rating": {
+      "rate": 4.1,
+      "count": 153
+    }
+  },
+  {
+    "id": 19,
+    "destination": "Itaalia",
+    "price": 926.97,
+    "description": "Napoli Seaside pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Napoli Seaside on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Napoli Seaside",
+    "length": 10,
+    "startDate": "02.08.2025",
+    "endDate": "12.08.2025",
+    "persons": 1,
+    "image": "https://cdn.worldota.net/t/640x400/content/20/88/208832f69656ff3dbeb25a609936cda4d1818d4a.JPEG",
+    "rating": {
+      "rate": 3.9,
+      "count": 169
+    }
+  },
+  {
+    "id": 20,
+    "destination": "Itaalia",
+    "price": 531.22,
+    "description": "Sicily Dream Resort pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Sicily Dream Resort on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Sicily Dream Resort",
+    "length": 9,
+    "startDate": "26.09.2025",
+    "endDate": "05.10.2025",
+    "persons": 4,
+    "image": "https://cdn.worldota.net/t/640x400/content/35/11/35115f3819036fca3dfe63daad599166c09bb901.JPEG",
+    "rating": {
+      "rate": 3.7,
+      "count": 176
+    }
+  },
+  {
+    "id": 21,
+    "destination": "Itaalia",
+    "price": 867.67,
+    "description": "Verona Hillside Inn pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Verona Hillside Inn on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Verona Hillside Inn",
+    "length": 10,
+    "startDate": "06.09.2025",
+    "endDate": "16.09.2025",
+    "persons": 3,
+    "image": "https://cdn.worldota.net/t/640x400/content/da/54/da54e8499e99b32a21b9dfeda3cad64e0d3e657a.jpeg",
+    "rating": {
+      "rate": 4.8,
+      "count": 139
+    }
+  },
+  {
+    "id": 22,
+    "destination": "Türgi",
+    "price": 784.67,
+    "description": "Sea Resort pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Sea Resort on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Sea Resort",
+    "length": 8,
+    "startDate": "12.07.2025",
+    "endDate": "20.07.2025",
+    "persons": 2,
+    "image": "https://cdn.worldota.net/t/640x400/content/d9/d5/d9d55bd4230cf6fb851dc098a505b1542e4c9761.jpeg",
+    "rating": {
+      "rate": 4.4,
+      "count": 115
+    }
+  },
+  {
+    "id": 23,
+    "destination": "Türgi",
+    "price": 860.75,
+    "description": "Antalya Palm Hotel pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Antalya Palm Hotel on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Antalya Palm Hotel",
+    "length": 6,
+    "startDate": "13.09.2025",
+    "endDate": "19.09.2025",
+    "persons": 4,
+    "image": "https://cdn.worldota.net/t/640x400/extranet/82/b0/82b061297b6e5abdfcebe11b140ae2909ec4007f.jpeg",
+    "rating": {
+      "rate": 4.8,
+      "count": 159
+    }
+  },
+  {
+    "id": 24,
+    "destination": "Türgi",
+    "price": 484.26,
+    "description": "Istanbul City Stay pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Istanbul City Stay on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Istanbul City Stay",
+    "length": 4,
+    "startDate": "01.08.2025",
+    "endDate": "05.08.2025",
+    "persons": 2,
+    "image": "https://cdn.worldota.net/t/640x400/extranet/1e/15/1e151830d5f2c67bccfd1846d63653e2fa93f1fa.JPEG",
+    "rating": {
+      "rate": 3.9,
+      "count": 89
+    }
+  },
+  {
+    "id": 25,
+    "destination": "Türgi",
+    "price": 653.46,
+    "description": "Bodrum Breeze pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Bodrum Breeze on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Bodrum Breeze",
+    "length": 9,
+    "startDate": "16.09.2025",
+    "endDate": "25.09.2025",
+    "persons": 3,
+    "image": "https://cdn.worldota.net/t/640x400/content/86/c0/86c0e1b1c8fbd133273dba5177b21351b83c3d03.jpeg",
+    "rating": {
+      "rate": 3.7,
+      "count": 116
+    }
+  },
+  {
+    "id": 26,
+    "destination": "Türgi",
+    "price": 432.34,
+    "description": "Cappadocia Cave Hotel pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Cappadocia Cave Hotel on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Cappadocia Cave Hotel",
+    "length": 8,
+    "startDate": "17.09.2025",
+    "endDate": "25.09.2025",
+    "persons": 2,
+    "image": "https://cdn.worldota.net/t/640x400/content/2a/9c/2a9c1523f26e557f920c05c72fc815a9c010b6e1.jpeg",
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "id": 27,
+    "destination": "Türgi",
+    "price": 519.22,
+    "description": "Kemer Luxury Inn pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Kemer Luxury Inn on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Kemer Luxury Inn",
+    "length": 8,
+    "startDate": "22.07.2025",
+    "endDate": "30.07.2025",
+    "persons": 1,
+    "image": "https://cdn.worldota.net/t/640x400/content/bc/4c/bc4c594e3cfa6b1ef0bdc978c4bacecbb005045a.JPEG",
+    "rating": {
+      "rate": 3.7,
+      "count": 125
+    }
+  },
+  {
+    "id": 28,
+    "destination": "Türgi",
+    "price": 825.96,
+    "description": "Marmaris Beach Club pakub ainulaadset puhkusekogemust, kus kaasaegne mugavus kohtub kohaliku kultuuriga. Hotellis on mitmekesised võimalused lõõgastumiseks, sealhulgas bassein, restoranid, spaateenused ja meelelahutusprogramm. Külalised saavad nautida maalilisi vaateid, mugavaid tube ja kõrgetasemelist teenindust. Ideaalne valik nii romantiliseks puhkuseks kui ka perega reisimiseks. Marmaris Beach Club on suurepärane koht unustamatuks puhkuseks.",
+    "hotel": "Marmaris Beach Club",
+    "length": 6,
+    "startDate": "20.08.2025",
+    "endDate": "26.08.2025",
+    "persons": 3,
+    "image": "https://cdn.worldota.net/t/640x400/extranet/16/94/1694a924a4d011076fe3127a7aba6a44fb8caaad.jpeg",
+    "rating": {
+      "rate": 4.8,
+      "count": 170
+    }
+  }
+]

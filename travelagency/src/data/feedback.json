@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Oleg Titov",
+    "rate": 4.6,
+    "comment": "Broneerimine oli lihtne, kuid klienditeenindus ei vastanud meilidele piisavalt kiiresti."
+  },
+  {
+    "id": 2,
+    "name": "Sergey Anissimov",
+    "rate": 4.2,
+    "comment": "Tõeliselt hea hinna ja kvaliteedi suhe. Soovitan soojalt!"
+  },
+  {
+    "id": 3,
+    "name": "Julia Zaitsev",
+    "rate": 4.7,
+    "comment": "Kahjuks ei vastanud reis ootustele – hotell oli vana ja määrdunud."
+  },
+  {
+    "id": 4,
+    "name": "Andrus Sillaots",
+    "rate": 4.2,
+    "comment": "Reis oli tore, kuid transfeeri korraldus vajab parendamist."
+  },
+  {
+    "id": 5,
+    "name": "Anneli Paap",
+    "rate": 4.4,
+    "comment": "Teenindus oli väga hea, kuid fotod ei vastanud päris tegelikkusele."
+  },
+  {
+    "id": 6,
+    "name": "Kristjan Krõlov",
+    "rate": 5.0,
+    "comment": "Hotell ja sihtkoht meeldisid, aga broneerimissüsteem oli veidi segane."
+  },
+  {
+    "id": 7,
+    "name": "Tarmo Kuusik",
+    "rate": 4.6,
+    "comment": "Üldiselt jäime rahule, kuid toit oleks võinud olla mitmekesisem."
+  },
+  {
+    "id": 8,
+    "name": "Jekaterina Afanasjev",
+    "rate": 4.3,
+    "comment": "Reis oli lihtsalt imeline, eriti ekskursioonid ja õhtused üritused."
+  },
+  {
+    "id": 9,
+    "name": "Peeter Salumäe",
+    "rate": 4.5,
+    "comment": "Super teenindus! Kindlasti kasutan teie teenuseid ka tulevikus."
+  },
+  {
+    "id": 10,
+    "name": "Marika Kesküla",
+    "rate": 4.8,
+    "comment": "Mõnus puhkus, aga õhtused meelelahutusprogrammid olid nõrgad."
+  },
+  {
+    "id": 11,
+    "name": "Malle Roosileht",
+    "rate": 4.7,
+    "comment": "Kõik sujus suurepäraselt, eriti meeldis professionaalne ja abivalmis klienditeenindus."
+  },
+  {
+    "id": 12,
+    "name": "Malle Post",
+    "rate": 3.8,
+    "comment": "Hotell oli puhas ja väga hea asukohaga. Väga rahule jäime!"
+  },
+  {
+    "id": 13,
+    "name": "Piret Lember",
+    "rate": 3.5,
+    "comment": "Väga meeldiv kogemus! Kõik oli hästi korraldatud ja hotell ületas ootusi."
+  },
+  {
+    "id": 14,
+    "name": "Mihkel Raadik",
+    "rate": 3.3,
+    "comment": "Meile meeldis, et kõik oli läbipaistev ja lihtne. Broneerimine oli kiire ja mugav."
+  },
+  {
+    "id": 15,
+    "name": "Oleg Jermakov",
+    "rate": 3.2,
+    "comment": "Olime pettunud, sest lubatud teenuseid ei olnud kohapeal üldse olemas."
+  }
+]

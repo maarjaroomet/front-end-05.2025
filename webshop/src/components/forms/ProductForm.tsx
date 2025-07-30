@@ -89,12 +89,18 @@ function ProductForm(props: ProductFormInterface) {
       return;
     }
 
-
+    if(sessionStorage.getItem("token") === null) {
+      toast.error("Õigused puuduvad");
+      return;
+    }
       
     fetch("http://localhost:8090/products", {
         method: props.id === -1 ? "POST" : "PUT", 
         body: JSON.stringify(product),
-        headers: {"Content-Type": "application/json"}
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization" : "Bearer" + sessionStorage.getItem("token")
+        }
       })
       .then(res => res.json())
       .then(json => {
